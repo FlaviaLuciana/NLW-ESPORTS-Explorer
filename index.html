@@ -9,7 +9,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>NLW eSPORTS</title>
 
-         <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="./styles.css">
+
+         <!-- Link Swiper's CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+        />
 
     </head>
         <body>
@@ -26,8 +32,9 @@
                         <h2>Meus Jogos</h2>
                         <p>Os games que eu mais curto jogar!</p>
 
-                        <ul class="games-list">
-                                <li>
+                        <div class="swiper mySwiper">
+                            <ul class="games-list swiper-wrapper">
+                                <li class="swiper-slide">
                                     <a 
                                       target="_blank"
                                       href="https://www.twitch.tv/directory/game/League%20of%20Legends">
@@ -36,16 +43,16 @@
                                     </a>
                                 </li>
 
-                                <li>
+                                <li class="swiper-slide">
                                     <a 
                                       target="_blank"
                                       href="https://www.twitch.tv/directory/game/Grand%20Theft%20Auto%20V">
                                         <img src="https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-188x250.jpg" 
                                         alt="Imagem do jogo Grand Theft Auto V">
                                     </a>
-                              </li>
+                                </li>
 
-                                <li>
+                                <li class="swiper-slide">
                                     <a 
                                       target="_blank"
                                       href="https://www.twitch.tv/directory/game/VALORANT">
@@ -53,7 +60,8 @@
                                         alt="Imagem do jogo VALORANT">
                                     </a>
                                 </li>
-                        </ul>
+                            </ul>
+                       </div>
                     </div>
                 </section>
 
@@ -156,5 +164,15 @@
                     </div>
                 </section>
             </main>
+                <!-- Swiper JS -->
+                <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+                <!-- Initialize Swiper -->
+                <script>
+                    new Swiper(".mySwiper", {
+                        slidesPerView:3,
+                        loop:true
+                    });
+                </script>
         </body>
 </html>
